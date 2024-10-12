@@ -1,6 +1,35 @@
-# template-vanilla
+# js-basic-conditions-zero-simple-calculator
 
-## Text
+## Acceptance Criteria for Simple JavaScript Calculator
+
+### Requirements:
+1. **Operations**:
+  - The calculator must support the following five operations:
+    - Multiplication (`*`)
+    - Division (`/`)
+    - Addition (`+`)
+    - Subtraction (`-`)
+    - Exponentiation (`**`)
+
+2. **User Input**:
+  - The user should be asked to:
+    1. Enter the first number.
+    2. Select the operation (from the five listed).
+    3. Enter the second number.
+
+3. **Result Calculation**:
+  - Based on the selected operation, the result must be calculated and displayed using `alert`.
+
+4. **Rounding Option**:
+  - After each operation, ask the user if they would like to round the result (Yes/No).
+    - If the user selects **Yes**, prompt for the desired decimal accuracy (number of decimal places).
+    - Display the rounded result using `alert`.
+
+5. **Termination**:
+  - After displaying the (rounded) result, the program ends.
+
+### Additional Notes:
+- Only use `alert`, `prompt`, and basic conditionals (e.g., `if`, `else if`, `else`) in the implementation.
 
 ## Criteria:
 
