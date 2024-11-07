@@ -8,65 +8,40 @@ let roundNumber;
 let roundResult;
 
 if (!isNaN(firstNumber) && !isNaN(secondNumber)) {
-  const isNeedToRound = confirm('Would you like to round the result?');
   if (operation === '+') {
     result = firstNumber + secondNumber;
-    if (isNeedToRound) {
-      roundNumber = prompt(
-        'How many digits should there be after the decimal point?',
-      );
-      roundResult = result.toFixed(roundNumber);
-      alert(roundResult);
-    } else {
-      alert(result);
-    }
   } else if (operation === '-') {
     result = secondNumber - firstNumber;
-    if (isNeedToRound) {
-      roundNumber = prompt(
-        'How many digits should there be after the decimal point?',
-      );
-      roundResult = result.toFixed(roundNumber);
-      alert(roundResult);
-    } else {
-      alert(result);
-    }
-  } else if (operation === `*`) {
+  } else if (operation === '*') {
     result = firstNumber * secondNumber;
-    if (isNeedToRound) {
-      roundNumber = prompt(
-        'How many digits should there be after the decimal point?',
-      );
-      roundResult = result.toFixed(roundNumber);
-      alert(roundResult);
-    } else {
-      alert(result);
-    }
-  } else if (operation === `/`) {
+  } else if (operation === '/') {
     result = firstNumber / secondNumber;
-    if (isNeedToRound) {
-      roundNumber = prompt(
-        'How many digits should there be after the decimal point?',
-      );
-      roundResult = result.toFixed(roundNumber);
-      alert(roundResult);
-    } else {
-      alert(result);
-    }
-  } else if (operation === `**`) {
+  } else if (operation === '**') {
     result = firstNumber ** secondNumber;
-    if (isNeedToRound) {
-      roundNumber = prompt(
-        'How many digits should there be after the decimal point?',
-      );
-      roundResult = result.toFixed(roundNumber);
-      alert(roundResult);
-    } else {
-      alert(result);
-    }
   } else {
-    alert('You entered invalid operation!');
+    alert('You entered an invalid operation!');
   }
 } else {
   alert('You entered an invalid value!');
+}
+
+if (
+  !isNaN(firstNumber) &&
+  !isNaN(secondNumber) &&
+  (operation === '+' ||
+    operation === '-' ||
+    operation === '*' ||
+    operation === '/' ||
+    operation === '**')
+) {
+  const isNeedToRound = confirm('Would you like to round the result?');
+  if (isNeedToRound) {
+    roundNumber = prompt(
+      'How many digits should there be after the decimal point?',
+    );
+    roundResult = result.toFixed(roundNumber);
+    alert(roundResult);
+  } else {
+    alert(result);
+  }
 }
